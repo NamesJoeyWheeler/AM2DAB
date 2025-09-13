@@ -4,7 +4,7 @@ A script for transferring songs from an Apple Music or Spotify playlist to a DAB
 # What is needed:
 
 - DAB Music Player account
-- Apple Music or Spotify playlist exported in CSV format ([playlists.cloud](playlists.cloud) recommended)
+- Apple Music or Spotify playlist exported in CSV format ([playlists.cloud](https://playlists.cloud) recommended)
 - Python 3.x (tested with 3.13.7)
 - Requests
 
@@ -18,6 +18,7 @@ A script for transferring songs from an Apple Music or Spotify playlist to a DAB
 
 - Download or git clone the repository... or just download AM2DAB.py and place it in an empty folder.
 - Place exported CSV of Apple Music or Spotify Playlist in the directory, and rename it to music.csv
+- Open script with text editor and find the EMAIL and PASSWORD fields. Fill them with your DAB Music Player account details.
 - Run the python script in a terminal, no additional args needed.
 - Wait patiently for most, if not all of your music to be added to a newly created library on DAB Music Player.
 
