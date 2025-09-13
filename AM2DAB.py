@@ -6,10 +6,10 @@ import sys
 import re
 
 API_BASE = "https://dab.yeet.su/api"
-EMAIL = "EMAIL GOES HERE"        # <-- replace
-PASSWORD = "PASSWORD GOES HERE"       # <-- replace
-CSV_PATH = "apple_music.csv"  # <-- path to your playlists.cloud CSV
-LIB_NAME = "Imported from Apple Music"
+EMAIL = "EMAIL"        # <-- replace
+PASSWORD = "PASSWORD"       # <-- replace
+CSV_PATH = "music.csv"  # <-- path to your playlists.cloud CSV
+LIB_NAME = "Imported Playlist"
 
 session = requests.Session()
 session.headers.update({"Accept": "application/json"})
@@ -39,7 +39,7 @@ print("Login OK — cookies:", session.cookies.get_dict())
 
 # --- Step 2: Create library ---
 print("Creating library...")
-lib_payload = {"name": LIB_NAME, "description": "Imported via script", "isPublic": False}
+lib_payload = {"name": LIB_NAME, "isPublic": False}
 lib_resp = session.post(f"{API_BASE}/libraries", json=lib_payload)
 if not lib_resp.ok:
     bad_exit("Failed to create library.", lib_resp)
